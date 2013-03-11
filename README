@@ -1,0 +1,60 @@
+This is the filepush module.
+
+This module was created simply to push files. It is fully parameterized to use with Foreman 1.1  I wanted to be able to fill in parameters on the web interface.
+
+License
+-------
+GPL use it how ever you would like and to your heart's content.
+
+Authors
+-------
+Demi Benson,
+Dominic Kaiser dominic@theriversouth.org
+
+Example
+-------
+class ct-filepush (
+  $source = undef,
+  $target = undef,
+  $owner  = undef,
+  $group  = $owner,
+  $mode   = 0644,
+) {
+  case $::osfamily {
+    'Windows': { fail('Does not yet work wint Windows') }
+    default: {
+      $path_sep = '/'
+      $filepath_ar = split($target, $path_sep)
+      $parent_path = join(delete_at($filepath_ar, -1), $path_sep)
+      exec { 'make_parent_dirs':
+        path    => [ '/usr/bin', '/usr/sbin', '/bin'],
+        command => "mkdir -p ${parent_path}",
+        unless  => "test -d ${parent_path}"
+      }
+    }
+  }
+
+  file { $target:
+    ensure => directory,
+    path   => $target,
+    mode   => $mode,
+    owner  => $owner,
+    group  => $group,
+    source => $source,
+  }
+}
+
+This is so I can push a file to a directory and if parent directories do not exist create them.  This gives you a blank template to just pop values in and apply.
+
+TODO
+----
+
+- Need to make it compatible with windows.  If anyone knows how to mkdir -p in windows let me know and I will finish adding this.
+
+New This Release
+----------------
+- Updated README
+
+Support
+-------
+Please email dominic@theriversouth.org Thank You!

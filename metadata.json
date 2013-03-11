@@ -1,0 +1,26 @@
+{
+  "project_page": "UNKNOWN",
+  "version": "0.0.3",
+  "checksums": {
+    "tests/init.pp": "42fca468f91df680788f8489de5a3add",
+    "Modulefile": "f7385d5c1b51747ce3012eb0f60ab6e1",
+    "spec/spec_helper.rb": "a55d1e6483344f8ec6963fcb2c220372",
+    "README": "5a47f1eb1a63d0794187106530458d76",
+    "manifests/init.pp": "5efd8327bd5a77c4bffdeb697cfe9d63"
+  },
+  "types": [
+
+  ],
+  "author": "Demi Benson, Dominic Kaiser",
+  "source": "UNKNOWN",
+  "license": "Apache License, Version 2.0",
+  "name": "ct-filepush",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 3.0.0"
+    }
+  ],
+  "description": "This module is a simple file push from a source to target and creates parent directories if needed. It also was created in mind to work with Foreman so that I could enter parameter values in Foremans new puppet classes area.",
+  "summary": "A module to push files"
+}
