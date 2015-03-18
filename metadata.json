@@ -1,24 +1,24 @@
 {
   "name": "ct-filepush",
-  "version": “0.0.5”,
+  "version": "0.0.5",
   "author": "Demi Benson, Dominic Kaiser",
   "license": "Apache-2.0",
   "summary": "A module to push files",
   "source": "https://github.com/dkudos/puppet-filepush",
   "project_page": "https://forge.puppetlabs.com/dominickaiser/filepush",
   "issues_url": "https://github.com/dkudos/puppet-filepush/issues",
-  "tags": [“filepush”, “foreman”, “file”],
+  "tags": ["filepush", "foreman", "file"],
   "operatingsystem_support": [
     {
     "operatingsystem":"RedHat",
     "operatingsystemrelease":[ "5.0", "6.0" ]
     },
-    "operatingsystem”:”Centos”,
+    "operatingsystem":"Centos",
     "operatingsystemrelease":[ "5.0", "6.0" ]
     },
     {
     "operatingsystem": "Ubuntu",
-    "operatingsystemrelease": [ “10.04", "12.04”, “14.04” ]
+    "operatingsystemrelease": [ "10.04", "12.04", "14.04" ]
     }
    ],
   "dependencies": [
