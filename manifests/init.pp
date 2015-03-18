@@ -45,7 +45,7 @@
 #
 # Copyright 2013 Dominic Kaiser, Demi Benson, unless otherwise noted.
 #
-class ct-filepush (
+class dominickaiser-filepush (
   $source = undef,
   $target = undef,
   $owner  = undef,
