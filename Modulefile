@@ -1,4 +1,4 @@
-name    'ct-filepush'
+name    'dominickaiser-filepush'
 version '0.0.5'
 author 'Demi Benson, Dominic Kaiser'
 dependency 'puppetlabs/stdlib', '>=3.0.0'
