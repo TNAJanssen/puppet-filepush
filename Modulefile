@@ -1,5 +1,5 @@
 name    'ct-filepush'
-version '0.0.3'
+version '0.0.5'
 author 'Demi Benson, Dominic Kaiser'
 dependency 'puppetlabs/stdlib', '>= 3.0.0'
 license 'Apache License, Version 2.0'
