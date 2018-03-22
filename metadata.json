@@ -1,12 +1,12 @@
 {
-  "name": "dominickaiser-filepush",
-  "version": "0.0.5",
-  "author": "Demi Benson, Dominic Kaiser",
+  "name": "filepush",
+  "version": "0.0.6",
+  "author": "Alexander Janssen",
   "license": "Apache-2.0",
   "summary": "A module to push files",
-  "source": "https://github.com/dkudos/puppet-filepush",
-  "project_page": "https://forge.puppetlabs.com/dominickaiser/filepush",
-  "issues_url": "https://github.com/dkudos/puppet-filepush/issues",
+  "source": "https://github.com/TNAJanssen/puppet-filepush",
+  "project_page": "https://forge.puppetlabs.com/tnajanssen/filepush",
+  "issues_url": "https://github.com/TNAJanssen/puppet-filepush/issues",
   "tags": ["filepush", "foreman", "file"],
   "operatingsystem_support": [
     {
