@@ -33,45 +33,16 @@
 #
 #
 #
-# === Examples
-#
-#
-# === Authors
-#
-# Demi Benson
-# Dominic Kaiser <dominic@theriversouth.org>
-#
-# === Copyright
-#
-# Copyright 2013 Dominic Kaiser, Demi Benson, unless otherwise noted.
-#
-class dominickaiser-filepush (
-  $source = undef,
-  $target = undef,
-  $owner  = undef,
-  $group  = $owner,
-  $mode   = 0644,
+class filepush (
+  $files = {}
 ) {
-  case $::osfamily {
-    'Windows': { fail('Does not yet work wint Windows') }
-    default: {
-      $path_sep = '/'
-      $filepath_ar = split($target, $path_sep)
-      $parent_path = join(delete_at($filepath_ar, -1), $path_sep)
-      exec { 'make_parent_dirs':
-        path    => [ '/usr/bin', '/usr/sbin', '/bin'],
-        command => "mkdir -p ${parent_path}",
-        unless  => "test -d ${parent_path}"
-      }
-    }
-  }
-
-  file { $target:
-    ensure => directory,
-    path   => $target,
-    mode   => $mode,
-    owner  => $owner,
-    group  => $group,
-    source => $source,
-  }
+  create_resources(file, $files)
+  #file { $target:
+  #  ensure => directory,
+  #  path   => $target,
+  #  mode   => $mode,
+  #  owner  => $owner,
+  #  group  => $group,
+  #  source => $source,
+  #}
 }
